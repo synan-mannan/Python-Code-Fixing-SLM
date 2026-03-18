@@ -1,0 +1,43 @@
+model:
+  slm_name: "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+  llm_name: "mistralai/Mistral-7B-Instruct-v0.2"
+
+training:
+  batch_size: 8
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0002
+  num_train_epochs: 3
+  max_seq_length: 512
+  warmup_steps: 100
+  logging_steps: 10
+  save_steps: 500
+  eval_steps: 500
+
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules:
+    [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj",
+    ]
+
+bitsandbytes:
+  load_in_4bit: true
+  bnb_4bit_use_double_quant: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: "float16"
+
+dataset:
+  train: "dataset/formatted_train.jsonl"
+  val: "dataset/formatted_val.jsonl"
+
+output_dir:
+  slm: "models/slm-debugger"
+  llm: "models/llm-debugger"

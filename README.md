@@ -5,7 +5,7 @@
 
 A production-grade end-to-end system for building a Domain-Specialized AI Agent that debugs Python errors using a fine-tuned Small Language Model (SLM).
 
-## 🎯 Project Goal
+## Project Goal
 
 **Input:** Python code + error traceback  
 **Output:** Structured debugging result:
@@ -18,7 +18,7 @@ A production-grade end-to-end system for building a Domain-Specialized AI Agent 
 }
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 1. **Dataset Pipeline** - Scrapes StackOverflow/GitHub for Python errors
 2. **SLM Fine-tuning** - QLoRA on TinyLlama-1.1B
@@ -26,7 +26,7 @@ A production-grade end-to-end system for building a Domain-Specialized AI Agent 
 4. **FastAPI Service** - Production API endpoint
 5. **Evaluation Framework** - Metrics & benchmarking
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 python-debug-ai-agent/
@@ -42,7 +42,7 @@ python-debug-ai-agent/
 └── README.md
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Setup Environment
 

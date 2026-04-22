@@ -1,8 +1,5 @@
 # Python Debug AI Agent
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
-
 A production-grade end-to-end system for building a Domain-Specialized AI Agent that debugs Python errors using a fine-tuned Small Language Model (SLM).
 
 ## Project Goal
